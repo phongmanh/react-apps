@@ -6,7 +6,9 @@
 creacte-react-app app-name
 
 ------------------
-
+#
+# install packages
+#
 npm install jquery --save
 npm install redux --save
 npm install react-redux --save
