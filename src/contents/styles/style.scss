@@ -1,0 +1,313 @@
+$C0: #007173;
+$C1: #00aaad;
+$C2: #73d1d2;
+$C3: #d7f4f5;
+$C4: #3e3f40;
+$C5: #6e6f71;
+$C6: #b2b3b6;
+$C7: #d1d2d4;
+$C8: #ecedf0;
+$font: "Arial";
+$header: #D7F4F5;
+$odd: #FFFFFF;
+$even: #F2F6F6;
+$row-select: #FFE6C9;
+$background: rgb(229, 246, 247);
+
+.page-content {
+    color: red;
+    font-weight: bold;
+    font-size: 20;
+    text-align: center;
+    margin-top: 200px;
+}
+
+.menu-center_container {
+    text-align: center !important;
+}
+
+.header {
+    background-color: var(--C1);
+    height: 71px;
+}
+
+.header ul li a {
+    color: white;
+    text-decoration: none;
+    padding: 0 10px;
+    position: relative;
+    height: 70px;
+}
+
+.header ul li {
+    display: inline-block;
+    position: relative;
+}
+
+.menu-center {
+    text-align: center;
+}
+
+.menu-left {
+    float: left;
+    line-height: 18px;
+    height: 70px;
+    color: white;
+    padding: 15px 0;
+}
+
+.menu-right {
+    float: right;
+}
+
+#menu-nav > li:hover a {
+    color: white;
+}
+
+#menu-nav > li:hover {
+    color: white;
+    background: $C2;
+}
+
+#menu-nav > li > a.active:after {
+    position: absolute;
+    display: block;
+    content: '';
+    border-top: 16px solid $C2;
+    border-right: 10px solid transparent;
+    border-left: 10px solid transparent;
+    left: calc(50% - 25px);
+}
+
+#menu-nav > li {
+    line-height: 70px;
+}
+
+#menu-nav span {
+    color: $C8;
+}
+
+.active {
+    background: $C2;
+}
+
+.edulog-container {
+    padding: 10px 10px 10px 10px;
+}
+
+.form-containter {
+    text-align: center;
+}
+
+.ant-form-item-label {
+    line-height: 28px !important;
+}
+
+.ant-form-item-label label {
+    color: #6e6f71;
+}
+
+.ant-form-item {
+    margin: 0px 10px 0px 0px !important;
+}
+
+.ant-form-item-control {
+    line-height: 25px !important;
+}
+
+.control-seprate {
+    margin-right: 10px;
+}
+
+.row-seprate {
+    padding-bottom: 10px;
+}
+
+.title-medium {
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.footer {
+    background-color: var(--C1);
+    height: 50px;
+    color: white;
+    text-align: center;
+    padding-top: 15px;
+}
+
+.content-container {
+    //height: 80vh;
+}
+
+.ant-form {
+    width: 660px;
+}
+
+.ant-menu-light {
+    background: $C1;
+}
+
+.ant-menu-horizontal > .ant-menu-item:hover, .ant-menu-horizontal >
+.ant-menu-submenu:hover, .ant-menu-horizontal > .ant-menu-item-active,
+.ant-menu-horizontal > .ant-menu-submenu-active, .ant-menu-horizontal >
+.ant-menu-item-open, .ant-menu-horizontal > .ant-menu-submenu-open,
+.ant-menu-horizontal > .ant-menu-item-selected, .ant-menu-horizontal >
+.ant-menu-submenu-selected {
+    border-bottom: 2px solid $C4;
+    color: $C4;
+    background: $C2;
+}
+
+.ant-menu-horizontal > .ant-menu-item,
+.ant-menu-horizontal > .ant-menu-submenu {
+    text-align: center;
+    float: none;
+}
+
+.row-background-first {
+    background: $odd;
+}
+
+.row-background-second {
+    background: $even;
+}
+
+/* 
+=====================================================================================
+ table cusomize
+   */
+
+@mixin border-radius($radius) {
+    -moz-border-radius: $radius;
+    -webkit-border-radius: $radius;
+    -ms-border-radius: $radius;
+    border-radius: $radius;
+}
+
+#edulog {
+    .ant-table-column-sorter {
+        display: none !important;
+    }
+
+    .ant-table-thead > tr > th {
+        background-color: $header !important;
+        color: $C1 !important;
+    }
+
+    .ant-table-thead > tr.ant-table-row-hover > td, .ant-table-tbody > tr.ant-table-row-hover > td, .ant-table-thead > tr:hover > td, .ant-table-tbody > tr:hover > td {
+        background: $row-select;
+    }
+
+    .ant-menu-item {
+        padding: 0;
+    }
+
+    .ant-table-fixed {
+        padding: 0;
+        margin: 0;
+    }
+
+    .ant-table-small {
+        border: 0;
+
+        @include border-radius(0px);
+    }
+
+    .ant-table-small .ant-table-header > table, .ant-table-small .ant-table-body > table {
+        padding: 0;
+    }
+
+    .ant-table-filter-icon {
+        color: $C1;
+    }
+
+    .ant-table-selection-column {
+        min-width: 5px;
+        width: 5px;
+        padding: 5px;
+    }
+
+    .ant-pagination.mini .ant-pagination-item, .ant-pagination.mini .ant-pagination-prev .ant-pagination-item-link
+    , .ant-pagination.mini .ant-pagination-next .ant-pagination-item-link {
+        background: transparent;
+    }
+
+    .ant-pagination-item-active, .ant-pagination-item-active:focus, .ant-pagination-item-active:hover {
+        color: $C1;
+        border: 1px solid $C1;
+        padding: 0;
+
+        @include border-radius(4px);
+    }
+
+    .ant-card {
+        background: transparent;
+        border-color: $C1;
+        width: 500px;
+    }
+
+    .ant-table-thead > tr, .ant-table-tbody > tr {
+        line-height: 16px;
+    }
+
+     .ant-select-selection__rendered {
+        line-height: 22px;
+    }
+    
+    .ant-select-selection--single {
+        height: 24px;
+    }
+
+}
+
+.modal-control-style {
+    width: 100px;
+}
+
+
+
+.editable-cell {
+    position: relative;
+}
+
+.editable-cell-input-wrapper,
+.editable-cell-text-wrapper {
+    padding-right: 20px;
+    height: 20px;
+}
+
+.editable-cell-text-wrapper {
+    padding: 0px 24px 5px 5px;
+}
+
+.editable-cell-icon,
+.editable-cell-icon-check {
+    position: absolute;
+    right: 0;
+    width: 20px;
+    cursor: pointer;
+}
+
+.editable-cell-icon {
+    line-height: 25px;
+    display: none;
+}
+
+.editable-cell-icon-check {
+    line-height: 25px;
+}
+
+.editable-cell:hover .editable-cell-icon {
+    display: inline-block;
+}
+
+.editable-cell-icon:hover,
+.editable-cell-icon-check:hover {
+    color: #108ee9;
+}
+
+.editable-add-btn {
+    margin-bottom: 8px;
+}
+
